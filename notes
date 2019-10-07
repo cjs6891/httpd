@@ -1,7 +1,7 @@
 Redirect http --to--> https
  - httpd.conf
 RewriteEngine On
-RewriteRule ^(.*)$ https://%{HTTP_HOST}$1 [R=302,L]
+RewriteRule ^(.*)$ https://%{HTTP_HOST}$1 [L, R=302]
 
 
 Redirect www --to--> non-www
